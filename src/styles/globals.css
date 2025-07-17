@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-color-primary: #ff611a;
+  --color-color-green: #749b3f;
+  --color-color-black: #212337;
+  --color-color-gray-20: #f4f6f6;
+  --color-color-gray-50: #d9d9d9;
+  --color-color-gray-80: #a6a6a6;
+  --color-color-gray-100: #4a4a52;
+
+  --font-rubik: "Rubik", sans-serif;
+  --font-questrial: "Questrial", sans-serif;
+
+  --text-heading-1: 5rem;
+  --text-heading-2: 3rem;
+  --text-heading-3: 2.5rem;
+  --text-heading-4: 2rem;
+  --text-subheading-1: 1.25rem;
+  --text-subheading-2: 0.875rem;
+
+  --text-body-1: 1.25rem;
+  --text-body-1--line-height: 1.6;
+
+  --text-body-2: 1.125rem;
+  --text-body-2--line-height: 1.33;
+  --text-body-3: 0.875;
+  --text-body-3--line-height: 1.71;
+
+  --text-body-4: 0.75rem;
+  --text-body-4--line-height: 1.5;
+
+  --text-button: 1.125rem;
+
+  --tracking-custom: -0.2%;
+}
+
+body {
+  font-family: var(--font-questrial);
+  font-size: var(--text-body-1);
+  line-height: var(--text-body-1--line-height);
+  color: var(--color-color-gray-100);
+}
