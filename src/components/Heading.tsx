@@ -1,20 +1,20 @@
 import { cn } from "@/lib/utils";
 
-type HeadingProps = React.ComponentPropsWithoutRef<"h1"> & {
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type Variant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+export type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
+  as?: Variant;
   size?: Variant;
   weight?: "bold" | "medium";
 };
 
-type Variant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-
 const headingClasses = {
-  h1: "text-heading-1",
-  h2: "text-heading-2",
+  h1: "text-heading-2 lg:text-heading-1",
+  h2: "text-heading-4 lg:text-heading-2",
   h3: "text-heading-3",
   h4: "text-heading-4",
-  h5: "text-subheading-1",
-  h6: "text-subheading-2",
+  h5: "text-heading-5",
+  h6: "text-heading-6",
 };
 
 const weightClasses = {
@@ -34,7 +34,7 @@ export default function Heading({
   return (
     <Comp
       className={cn(
-        "font-rubik tracking-custom",
+        "font-rubik tracking-custom text-color-black! leading-none",
         headingClasses[size],
         weightClasses[weight],
         className
