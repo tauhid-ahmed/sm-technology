@@ -140,7 +140,3 @@ Due to time constraints and to prioritize design + API accuracy, unit testing wa
 Thanks again for the opportunity!
 **– Tauhid Ahmed**
 📧 [tauhidahmed.dev@gmail.com](mailto:tauhidahmed.dev@gmail.com) | 🌐 [Portfolio](https://tauhidahmed.vercel.app)
-
----
-
-Let me know if you want a markdown version or want to auto-publish it as a `README.md` file.
