@@ -1,7 +1,7 @@
 # 🚀 SM Technology – Frontend Developer Task
 
 Hi there! 👋
-Thank you for reviewing this submission for the **Frontend Developer Position at SM Technology**. This project is built using **Next.js 14 (Turbopack)** with **TypeScript** and **Tailwind CSS**, following the provided Figma designs and API documentation.
+Thank you for reviewing this submission for the **Frontend Developer Position at SM Technology**. This project is built using **Next.js 15 (Turbopack)** with **TypeScript** and **Tailwind CSS**, following the provided Figma designs and API documentation.
 
 ---
 
