@@ -16,6 +16,9 @@
   --text-heading-2: 3rem;
   --text-heading-3: 2.5rem;
   --text-heading-4: 2rem;
+  --text-heading-5: 1.5rem;
+  --text-heading-6: 1.125rem;
+
   --text-subheading-1: 1.25rem;
   --text-subheading-2: 0.875rem;
 
@@ -32,7 +35,7 @@
 
   --text-button: 1.125rem;
 
-  --tracking-custom: -0.2%;
+  --tracking-custom: -0.01em;
 }
 
 body {
