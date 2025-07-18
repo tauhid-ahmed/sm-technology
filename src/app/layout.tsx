@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 
 import { Rubik, Questrial } from "next/font/google";
+import { ReduxProvider } from "@/store/provider";
+import { Footer, Navbar } from "@/components";
+import { AppInitializer } from "@/components/AppInitializer";
+import AuthForms from "@/components/AuthForm";
 
 export const rubik = Rubik({
   subsets: ["latin"],
@@ -27,9 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${rubik.variable} ${questrial.variable} antialiased`}>
-        {children}
+    <html className="scroll-smooth" lang="en">
+      <body
+        className={`min-h-screen flex flex-col ${rubik.variable} ${questrial.variable} antialiased`}
+      >
+        <ReduxProvider>
+          <AppInitializer />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <AuthForms />
+        </ReduxProvider>
       </body>
     </html>
   );
