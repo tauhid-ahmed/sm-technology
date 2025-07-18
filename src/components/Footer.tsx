@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
-import Container from "./Container";
-import Heading from "./Heading";
+import Container from "./shared/Container";
+import Heading from "./shared/Heading";
 
 import logo from "@/assets/logo.png";
 import playStoreLogo from "@/assets/playStore.png";

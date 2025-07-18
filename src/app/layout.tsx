@@ -3,9 +3,8 @@ import "@/styles/globals.css";
 
 import { Rubik, Questrial } from "next/font/google";
 import { ReduxProvider } from "@/store/provider";
-import { Footer, Navbar } from "@/components";
-import { AppInitializer } from "@/components/AppInitializer";
-import AuthForms from "@/components/AuthForm";
+import { AppInitializer, Footer, Navbar } from "@/components";
+import AuthForms from "@/components/auth/AuthForm";
 
 export const rubik = Rubik({
   subsets: ["latin"],

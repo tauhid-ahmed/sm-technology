@@ -1,7 +1,6 @@
-// components/AuthSocialSection.tsx
 "use client";
 
-import React, { JSX } from "react";
+import { JSX } from "react";
 
 interface AuthSocialSectionProps {
   variant: "login" | "signup";

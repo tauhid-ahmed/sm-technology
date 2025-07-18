@@ -7,13 +7,16 @@ import {
 } from "@/store/services/productApi";
 import Image from "next/image";
 import { useState } from "react";
-import Badge from "./Badge";
-import Button from "./Button";
-import Container from "./Container";
-import Heading from "./Heading";
-import ProductCard from "./ProductCard";
-import Section from "./Section";
-import ProductSkeleton from "./ProductSkeleton";
+import ProductCard from "../product/ProductCard";
+import ProductSkeleton from "../product/ProductSkeleton";
+
+import {
+  Badge,
+  Button,
+  Container,
+  Heading,
+  Section,
+} from "@/components/shared";
 
 const VISIBLE_PRODUCTS = 8;
 

@@ -8,9 +8,9 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Eye, EyeOff } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AuthSocialForms } from ".";
-import Button from "./Button";
-import Heading from "./Heading";
+import AuthSocialForms from "./AuthSocialForm";
+import Button from "../shared/Button";
+import Heading from "../shared/Heading";
 
 const TextInput = ({
   label,

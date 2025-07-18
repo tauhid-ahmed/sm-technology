@@ -9,9 +9,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ActiveLink from "./ActiveLink";
-import Button from "./Button";
-import Container from "./Container";
+import ActiveLink from "./shared/ActiveLink";
+import Button from "./shared/Button";
+import Container from "./shared/Container";
 import { cn } from "@/lib/utils";
 
 const navData = [

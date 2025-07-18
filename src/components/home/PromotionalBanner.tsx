@@ -1,9 +1,6 @@
 "use client";
 
-import Section from "./Section";
-import Container from "./Container";
-import Badge from "./Badge";
-import Heading from "./Heading";
+import { Badge, Container, Heading, Section } from "@/components/shared";
 
 import { useCountdown } from "@/hooks/useCountdown";
 

@@ -6,7 +6,7 @@ import { userApi } from "@/store/services/userApi";
 import type { AppDispatch } from "@/store";
 import { hydrateCartFromStorage } from "@/store/slices/appSlice";
 
-export const AppInitializer = () => {
+export default function AppInitializer() {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -23,4 +23,4 @@ export const AppInitializer = () => {
   }, [dispatch]);
 
   return null;
-};
+}

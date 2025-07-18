@@ -4,8 +4,8 @@ import {
   OurProducts,
   PromotionalBanner,
   Testimonial,
-} from "@/components";
-import Hero from "@/components/Hero";
+} from "@/components/home";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (

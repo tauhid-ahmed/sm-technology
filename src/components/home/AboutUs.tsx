@@ -1,11 +1,13 @@
-import Badge from "./Badge";
-import Container from "./Container";
-import Heading from "./Heading";
-import Section from "./Section";
-import Image from "next/image";
 import aboutUs from "@/assets/aboutUs.png";
+import {
+  Badge,
+  Button,
+  Container,
+  Heading,
+  Section,
+} from "@/components/shared";
+import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 export default function AboutUs() {
   return (

@@ -1,4 +1,4 @@
-import Container from "./Container";
+import Container from "../shared/Container";
 
 export default function ProductDetailSkeleton() {
   return (

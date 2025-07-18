@@ -1,10 +1,8 @@
-import Badge from "./Badge";
-import Container from "./Container";
-import Heading from "./Heading";
-import Section from "./Section";
-import Image from "next/image";
 import testimonial from "@/assets/testimonial.png";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+import { Badge, Container, Heading, Section } from "@/components/shared";
 
 const customerTestimonials = [
   {

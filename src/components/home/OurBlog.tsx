@@ -1,13 +1,11 @@
-import Badge from "./Badge";
-import Container from "./Container";
-import Heading from "./Heading";
-import Section from "./Section";
-import Image from "next/image";
-import Link from "next/link";
 import blog1 from "@/assets/blog-01.png";
 import blog2 from "@/assets/blog-02.png";
 import blog3 from "@/assets/blog-03.png";
 import leafIcon from "@/assets/leaf.png";
+import Image from "next/image";
+import Link from "next/link";
+
+import { Badge, Container, Heading, Section } from "@/components/shared";
 
 const data = [
   {

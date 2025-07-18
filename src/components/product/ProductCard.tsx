@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 
-import Link from "next/link";
-import Button from "./Button";
-import { Product } from "@/types/product";
 import useAuthGuard from "@/hooks/useAuthGuard";
 import { addToCart, showAuthForm } from "@/store/slices/appSlice";
+import { Product } from "@/types/product";
+import Link from "next/link";
 import { useDispatch } from "react-redux";
+
+import { Button } from "@/components/shared";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { user } = useAuthGuard();

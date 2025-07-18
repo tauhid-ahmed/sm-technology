@@ -1,4 +1,4 @@
-import { ProductDetail } from "@/components";
+import { ProductDetail } from "@/components/product";
 
 type ProductDetailPageParams = {
   params: Promise<{ id: string }>;

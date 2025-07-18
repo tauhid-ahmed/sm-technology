@@ -1,28 +1,31 @@
 "use client";
+import useAuthGuard from "@/hooks/useAuthGuard";
 import {
   useGetCategoryQuery,
   useGetProductQuery,
 } from "@/store/services/productApi";
+import { addToCart, showAuthForm } from "@/store/slices/appSlice";
 import { Product } from "@/types/product";
-import Container from "./Container";
-import Section from "./Section";
-import Image from "next/image";
-import Button from "./Button";
 import {
-  LucideShoppingCart,
   LucideHeart,
-  LucideStar,
   LucideMinus,
   LucidePlus,
+  LucideShoppingCart,
+  LucideStar,
 } from "lucide-react";
-import Badge from "./Badge";
-import Heading from "./Heading";
+import Image from "next/image";
 import { useState } from "react";
-import RelatedProducts from "./RelatedProducts";
 import { useDispatch } from "react-redux";
-import { addToCart, showAuthForm } from "@/store/slices/appSlice";
-import useAuthGuard from "@/hooks/useAuthGuard";
 import ProductDetailSkeleton from "./ProductDetailSkeleton";
+import RelatedProducts from "./RelatedProducts";
+
+import {
+  Badge,
+  Button,
+  Container,
+  Heading,
+  Section,
+} from "@/components/shared";
 
 export default function ProductDetail({ productId }: { productId: string }) {
   const { data: product, isLoading } = useGetProductQuery(productId);

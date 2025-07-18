@@ -1,15 +1,17 @@
-import Badge from "./Badge";
-import Button from "./Button";
-import Container from "./Container";
-import Heading from "./Heading";
-import Section from "./Section";
-import Image from "next/image";
-import girlImage from "@/assets/girl.png";
-import offerImage from "@/assets/offerImage.png";
-import Link from "next/link";
-import playStoreLogo from "@/assets/playStore.png";
 import appStoreLogo from "@/assets/appStore.png";
+import girlImage from "@/assets/girl.png";
 import leafImage from "@/assets/leaf.png";
+import offerImage from "@/assets/offerImage.png";
+import playStoreLogo from "@/assets/playStore.png";
+import {
+  Badge,
+  Button,
+  Container,
+  Heading,
+  Section,
+} from "@/components/shared";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (

@@ -2,12 +2,10 @@
 
 import { useGetProductsQuery } from "@/store/services/productApi";
 import { Product } from "@/types/product";
-import Badge from "./Badge";
-import Container from "./Container";
-import Heading from "./Heading";
 import ProductCard from "./ProductCard";
-import Section from "./Section";
 import ProductSkeleton from "./ProductSkeleton";
+
+import { Badge, Container, Heading, Section } from "@/components/shared";
 
 export default function RelatedProducts() {
   const { data: products, isLoading } = useGetProductsQuery();
