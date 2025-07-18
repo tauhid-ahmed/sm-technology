@@ -7,6 +7,7 @@ import Container from "./Container";
 import Heading from "./Heading";
 import ProductCard from "./ProductCard";
 import Section from "./Section";
+import ProductSkeleton from "./ProductSkeleton";
 
 export default function RelatedProducts() {
   const { data: products, isLoading } = useGetProductsQuery();
@@ -14,10 +15,6 @@ export default function RelatedProducts() {
   const productsData: Product[] = products?.data ?? [];
 
   const randomFourProducts = getFourRandomProducts(productsData);
-
-  if (isLoading) {
-    return <div className="text-center">Loading...</div>;
-  }
 
   return (
     <Section>
@@ -33,15 +30,19 @@ export default function RelatedProducts() {
           </p>
         </div>
       </Container>
-      <Container>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6  mt-6 lg:mt-8">
-          {randomFourProducts.length === 0
-            ? "No products found"
-            : randomFourProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-        </div>
-      </Container>
+      {isLoading ? (
+        <ProductSkeleton length={4} />
+      ) : (
+        <Container>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6  mt-6 lg:mt-8">
+            {randomFourProducts.length === 0
+              ? "No products found"
+              : randomFourProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+          </div>
+        </Container>
+      )}
     </Section>
   );
 }

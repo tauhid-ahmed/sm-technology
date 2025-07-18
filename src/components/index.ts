@@ -14,3 +14,5 @@ export { default as Testimonial } from "./Testimonial";
 export { default as AboutUs } from "./AboutUs";
 export { default as PromotionalBanner } from "./PromotionalBanner";
 export { default as AuthSocialForms } from "./SocialForm";
+export { default as ProductSkeleton } from "./ProductSkeleton";
+export { default as ProductDetailSkeleton } from "./ProductDetailSkeleton";

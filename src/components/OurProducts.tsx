@@ -13,6 +13,7 @@ import Container from "./Container";
 import Heading from "./Heading";
 import ProductCard from "./ProductCard";
 import Section from "./Section";
+import ProductSkeleton from "./ProductSkeleton";
 
 const VISIBLE_PRODUCTS = 8;
 
@@ -55,10 +56,6 @@ export default function OurProducts() {
     if (activeTab === "all") return product;
     return product.categoryName.toLowerCase() === activeTab;
   });
-
-  if (isLoading) {
-    return <div className="text-center">Loading...</div>;
-  }
 
   const toggleVisibleProducts =
     visibleProducts === VISIBLE_PRODUCTS ? -1 : VISIBLE_PRODUCTS;
@@ -103,27 +100,31 @@ export default function OurProducts() {
           </ul>
         </div>
       </Container>
-      <Container>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6  mt-6 lg:mt-8">
-          {filteredProducts.length === 0
-            ? "No products found"
-            : filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-        </div>
-        <div className="text-center mt-6 lg:mt-8">
-          <Button
-            disabled={!productsData.length}
-            onClick={() => setVisibleProducts(() => toggleVisibleProducts)}
-            variant="primary"
-            tone="outline"
-          >
-            {toggleVisibleProducts === VISIBLE_PRODUCTS
-              ? "See less products"
-              : "See all products"}
-          </Button>
-        </div>
-      </Container>
+      {isLoading ? (
+        <ProductSkeleton />
+      ) : (
+        <Container>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6  mt-6 lg:mt-8">
+            {filteredProducts.length === 0
+              ? "No products found"
+              : filteredProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+          </div>
+          <div className="text-center mt-6 lg:mt-8">
+            <Button
+              disabled={!productsData.length}
+              onClick={() => setVisibleProducts(() => toggleVisibleProducts)}
+              variant="primary"
+              tone="outline"
+            >
+              {toggleVisibleProducts === VISIBLE_PRODUCTS
+                ? "See less products"
+                : "See all products"}
+            </Button>
+          </div>
+        </Container>
+      )}
     </Section>
   );
 }

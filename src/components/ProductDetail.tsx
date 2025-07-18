@@ -22,33 +22,39 @@ import RelatedProducts from "./RelatedProducts";
 import { useDispatch } from "react-redux";
 import { addToCart, showAuthForm } from "@/store/slices/appSlice";
 import useAuthGuard from "@/hooks/useAuthGuard";
+import ProductDetailSkeleton from "./ProductDetailSkeleton";
 
 export default function ProductDetail({ productId }: { productId: string }) {
   const { data: product, isLoading } = useGetProductQuery(productId);
   const [quantity, setQuantity] = useState(1);
   const productData: Product = product?.data ?? ({} as Product);
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+
   return (
     <Section className="py-8">
-      <Container>
-        <div className="grid lg:grid-cols-2 gap-12">
-          <ImageGallery productData={productData} />
-          <div className="flex flex-col justify-between h-full">
-            <ProductInfo productData={productData} />
-            <div className="mt-10">
-              <ProductQuantity quantity={quantity} setQuantity={setQuantity} />
-              <AddToCart
-                productId={productData.id}
-                quantity={quantity}
-                setQuantity={setQuantity}
-              />
+      {isLoading ? (
+        <ProductDetailSkeleton />
+      ) : (
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <ImageGallery productData={productData} />
+            <div className="flex flex-col justify-between h-full">
+              <ProductInfo productData={productData} />
+              <div className="mt-10">
+                <ProductQuantity
+                  quantity={quantity}
+                  setQuantity={setQuantity}
+                />
+                <AddToCart
+                  productId={productData.id}
+                  quantity={quantity}
+                  setQuantity={setQuantity}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <ProductExtraInfo productData={productData} />
-      </Container>
+          <ProductExtraInfo productData={productData} />
+        </Container>
+      )}
       <div className="py-16 lg:py-[7.5rem]">
         <RelatedProducts />
       </div>

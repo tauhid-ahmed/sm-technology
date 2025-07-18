@@ -9,6 +9,7 @@ import offerImage from "@/assets/offerImage.png";
 import Link from "next/link";
 import playStoreLogo from "@/assets/playStore.png";
 import appStoreLogo from "@/assets/appStore.png";
+import leafImage from "@/assets/leaf.png";
 
 export default function Hero() {
   return (
@@ -38,10 +39,13 @@ export default function Hero() {
             alt="offer"
             className="max-w-lg -translate-x-1/4 md:translate-x-1/4 w-full block h-auto"
           />
-          <div className="mt-6">
-            <Heading as="h3" size="h6" weight="medium" className="text-sm!">
-              Download App:
-            </Heading>
+          <div className="mt-6 relative z-10">
+            <Image
+              src={leafImage}
+              alt="leaf"
+              className="absolute left-0 -translate-x-1/2 top-1/4 w-16 -rotate-45 -z-10"
+            />
+            <span className="text-sm">Download App:</span>
             <div className="flex space-x-4 mt-3">
               <Link href="#" prefetch={false} className="block">
                 <Image
