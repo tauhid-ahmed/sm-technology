@@ -97,12 +97,6 @@ npm run start
 
 ---
 
-## 🚧 Skipped: Unit Testing
-
-Due to time constraints and to prioritize design + API accuracy, unit testing was not included. The codebase is structured to easily allow future test additions.
-
----
-
 ## ✅ Deliverables
 
 - [x] Fully responsive frontend
