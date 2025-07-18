@@ -1,7 +1,3 @@
-Here's a **human-friendly, professional, and developer-focused README** based on your task details. It guides the reviewer clearly and respectfully while keeping a friendly tone:
-
----
-
 # 🚀 SM Technology – Frontend Developer Task
 
 Hi there! 👋
@@ -121,7 +117,7 @@ Due to time constraints and to prioritize design + API accuracy, unit testing wa
 ## 📅 Deadline
 
 **Submission Due:** July 19, 2025 — 11:59 PM
-**Submitted On:** July 19, 2025 — 5:30 AM
+**Submitted On:** July 19, 2025 — 5:35 AM
 
 ---
 
